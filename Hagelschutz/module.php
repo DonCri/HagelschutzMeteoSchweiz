@@ -39,8 +39,7 @@ class Hagelschutz extends IPSModule
 		$this->RegisterPropertyInteger("hwTypeID", 0);
 		
 		// Timer Registrieren
-		//$this->RegisterTimer("GetRequest", 120000, 'BRELAG_GetHailRequest($_IPS[\'TARGET\']);');
-		$this->RegisterTimer("GetRequest", 120000, '');
+		$this->RegisterTimer("GetRequest", 0, 'BRELAG_GetHailRequest($_IPS[\'TARGET\']);');
 		
     }
 	
@@ -55,6 +54,11 @@ class Hagelschutz extends IPSModule
 	public function ApplyChanges() {
             // Diese Zeile nicht löschen
             parent::ApplyChanges();
+
+			$this->SetTimerInterval('Update', $this->ReadPropertyInteger('UpdateInterval') * 1000);
+			if ($oldInterval = 120000) {
+				IPS_DeleteEvent($oldInterval);
+			}
         }
 		
 	public function GetHailRequest() {
