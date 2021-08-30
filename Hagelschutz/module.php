@@ -57,8 +57,8 @@ class Hagelschutz extends IPSModule
         }
 
 	public function GetHailRequest() {
-		$deviceID = GetValueString($this->ReadPropertyString("deviceID"));
-		$hwtypeID = GetValue($this->ReadPropertyInteger("hwTypeID"));
+		$deviceID = $this->ReadPropertyString("deviceID");
+		$hwtypeID = $this->ReadPropertyInteger("hwTypeID");
 		$url = "https://www.meteo.netitservices.com/api/v0/devices/" . $deviceID . "/poll?hwtypeId=" . $hwtypeID;
 		echo($url);
 		$contents = file_get_contents($url);
