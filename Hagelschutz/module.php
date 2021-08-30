@@ -83,10 +83,3 @@ class Hagelschutz extends IPSModule
 	}
 	
 }
-
-30.08.2021, 21:03:15 | TimerPool            | Brelag Hagelschutz Meteo Schweiz (GetRequest): <br />
-<b>Warning</b>:  Cannot auto-convert value for parameter VariableID in <b>/Library/Application Support/Symcon/modules/HagelschutzMeteoSchweiz/Hagelschutz/module.php</b> on line <b>60</b><br />
-<br />
-<b>Warning</b>:  Variable #203 existiert nicht in <b>/Library/Application Support/Symcon/modules/HagelschutzMeteoSchweiz/Hagelschutz/module.php</b> on line <b>61</b><br />
-'https://www.meteo.netitservices.com/api/v0/devices/' .  . '/poll?hwtypeId=' . <br />
-<b>Warning</b>:  file_get_contents('https://www.meteo.netitservices.com/api/v0/devices/' .  . '/poll?hwtypeId=' . ): failed to open stream: No such file or directory in <b>/Library/Application Support/Symcon/modules/HagelschutzMeteoSchweiz/Hagelschutz/module.php</b> on line <b>64</b><br />
