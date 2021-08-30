@@ -84,8 +84,3 @@ class Hagelschutz extends IPSModule
 	}
 	
 }
-
-30.08.2021, 21:11:45 | TimerPool            | Brelag Hagelschutz Meteo Schweiz (GetRequest): https://www.meteo.netitservices.com/api/v0/devices/b827eb02b052/poll?hwtypeId=203<br />
-<b>Warning</b>:  file_get_contents(): php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in <b>/Library/Application Support/Symcon/modules/HagelschutzMeteoSchweiz/Hagelschutz/module.php</b> on line <b>64</b><br />
-<br />
-<b>Warning</b>:  file_get_contents(https://www.meteo.netitservices.com/api/v0/devices/b827eb02b052/poll?hwtypeId=203): failed to open stream: php_network_getaddresses: getaddrinfo failed: nodename nor servname provided, or not known in <b>/Library/Application Support/Symcon/modules/HagelschutzMeteoSchweiz/Hagelschutz/module.php</b> on line <b>64</b><br />
