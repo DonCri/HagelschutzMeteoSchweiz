@@ -1,7 +1,11 @@
  { 
 	 "translations": { 
 		 "de": { 
-		 
+			"NoHail" : "Kein Hagel",
+			"Hail" : "Hagelalarm",
+			"TestHail" : "Testalarm",
+			"HailStateOn" : "Aktiv",
+			"HailStateOff" : "Kein Hagelschutz"
 		 } 
 	 } 
  }
