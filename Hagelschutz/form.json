@@ -1,0 +1,9 @@
+{ 
+	"elements": 
+	[ 
+		{ "type": "Label", "caption": "deviceID" },
+		{ "type": "ValidationTextBox", "name": "deviceID", "caption": "deviceID" },
+		{ "type": "Label", "caption": "hwTypeID" },
+		{ "type": "NumberSpinner", "name": "hwTypeID", "caption": "hwTypeID" }
+	] 
+} 

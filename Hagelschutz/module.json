@@ -1,0 +1,14 @@
+{ 
+	"id": "{23F48244-033E-C4CC-3F79-A83EB8C9ED0D}", 
+	"name": "Hagelschutz", 
+	"type": 3, 
+	"vendor": "Brelag Schweiz AG", 
+	"aliases": 
+		[ 
+			"Brelag Hagelschutz Meteo Schweiz" 
+		], 
+	"parentRequirements": [], 
+	"childRequirements": [], 
+	"implemented": [], 
+	"prefix": "BRELAG" 
+} 
