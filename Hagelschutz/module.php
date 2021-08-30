@@ -17,7 +17,7 @@ class Hagelschutz extends IPSModule
             
         // Profile
 		if(!IPS_VariableProfileExists("HailState")) {
-			IPS_CreateVariableProfile("HailState", 0); // 0 = Boolean, 1 = Integer, 2 = Float, 3 = String
+			IPS_CreateVariableProfile("HailState", 0); // 0 = Boolean, 1 = Integer, 2 = Float, 3 = String 
 			IPS_SetVariableProfileAssociation("HailState", true, $this->Translate("HailStateOn"), "", 0x00FF00); // String_WertName kann mit $$this->translate("ID") in locale.json übersetzten
 			IPS_SetVariableProfileAssociation("HailState", false, $this->Translate("HailStateOff"), "", -1); // String_WertName kann mit $$this->translate("ID") in locale.json übersetzten
 		}
@@ -31,8 +31,8 @@ class Hagelschutz extends IPSModule
             
 		// Notwenige Variablen
 		$this->RegisterVariableBoolean("STATE", "Status", "HailState", 1);
-		//SetValue($this->GetIDForIdent("STATE"), true);
-		$this->RegisterVariableInteger("HAIL", "Hagelstatus", "HailWarning", 2);
+		SetValue($this->GetIDForIdent("STATE"), true);
+		$this->RegisterVariableInteger("HAIL", "Hagelmeldung", "HailWarning", 2);
             
         // Eigenschaften speichern
 		$this->RegisterPropertyString("deviceID", "");
