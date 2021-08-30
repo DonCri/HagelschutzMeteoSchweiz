@@ -39,8 +39,7 @@ class Hagelschutz extends IPSModule
 		$this->RegisterPropertyInteger("hwTypeID", 0);
 		
 		// Timer Registrieren
-		$this->RegisterTimer("GetRequest", 0, 'BRELAG_GetHailRequest($_IPS[\'TARGET\']);');
-		$this->SetTimerInterval("GetRequest", 120000);
+		$this->RegisterTimer("GetRequest", 120000, 'BRELAG_GetHailRequest($_IPS[\'TARGET\']);');
 		
     }
 	
@@ -58,10 +57,10 @@ class Hagelschutz extends IPSModule
         }
 		
 	public function GetHailRequest() {
-		$deviceID = $this->ReadPropertyString("deviceID");
-		$hwtypeID = $this->ReadPropertyInteger("hwTypeID");
+		$deviceID = GetValue($this->ReadPropertyString("deviceID"));
+		$hwtypeID = GetValue($this->ReadPropertyInteger("hwTypeID"));
 		$url = 'https://www.meteo.netitservices.com/api/v0/devices/' . $deviceID . '/poll?' . $hwtypeID;
-		
+		echo($url);
 		$contents = file_get_contents($url);
 		
 		if($contents !== false) {
